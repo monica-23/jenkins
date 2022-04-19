@@ -1,3 +1,4 @@
-FROM node:16-alpine
 
-RUN apk add -U git curl
+FROM alpine:3.10
+RUN apk add --update docker openrc
+RUN rc-update add docker boot
